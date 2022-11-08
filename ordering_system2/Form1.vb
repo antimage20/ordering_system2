@@ -3,6 +3,10 @@
 
     Private Sub btn_login_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_login.Click
 
+        frm_order.Show()
+
+        Me.Hide()
+
         If txt_username.Text = "admin" And txt_password.Text = "admin1234" Then
             MessageBox.Show("Login successfully")
             frm_order.Show()
@@ -42,4 +46,5 @@
         End If
         
     End Sub
+
 End Class

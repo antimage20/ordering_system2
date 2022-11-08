@@ -1,11 +1,28 @@
 ﻿Public Class frm_order
 
+    Dim total As Integer
+    Dim pasta1 As Integer = 0,
+        pasta2 As Integer = 0,
+        pasta3 As Integer = 0,
+        pasta4 As Integer = 0,
+        pasta5 As Integer = 0,
+        bread1 As Integer = 0,
+        bread2 As Integer = 0,
+        bread3 As Integer = 0,
+        bread4 As Integer = 0,
+        bread5 As Integer = 0,
+        coffee1 As Integer = 0,
+        coffee2 As Integer = 0,
+        coffee3 As Integer = 0,
+        coffee4 As Integer = 0,
+        coffee5 As Integer = 0
 
     Public Sub gb_pasta_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gb_pasta.Enter
 
         For Each Control As Control In Me.gb_pasta.Controls
 
             If TypeOf Control Is TextBox Then
+
 
                 Control.Enabled = False
 
@@ -38,23 +55,15 @@
         Next
     End Sub
 
-    Private Sub gb_payment_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gb_payment.Enter
-
-        txt_amounttopay.Enabled = False
-        txt_change.Enabled = False
-        btn_pay.Enabled = False
-
-    End Sub
 
     Private Sub cbx_plainpasta_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbx_plainpasta.CheckedChanged
 
 
         If cbx_plainpasta.Checked = True Then
             txt_quantityplainpasta.Enabled = True
-
         ElseIf cbx_plainpasta.Checked = False Then
             txt_quantityplainpasta.Enabled = False
-            txt_quantityplainpasta.Text = "0.00"
+            txt_quantityplainpasta.Text = "0"
 
 
         End If
@@ -193,6 +202,39 @@
 
     End Sub
 
+    Private Sub Gcash_CheckedChanged(sender As Object, e As EventArgs) Handles Gcash.CheckedChanged
+        txt_amounttendered.Enabled = False
+        txt_change.Enabled = False
+
+
+
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs)
+        gcashITO.Show()
+
+        Me.Enabled = False
+
+
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs)
+        gcashITO.Hide()
+
+        Me.Enabled = True
+    End Sub
+
+    Private Sub txt_amounttendered_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_amounttendered.KeyPress
+
+        If Not txt_amounttopay.Text = 0.00 Then
+
+            btn_pay.Enabled = True
+
+
+        End If
+
+    End Sub
+
     Private Sub cbx_classiclatte_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbx_classiclatte.CheckedChanged
 
 
@@ -206,6 +248,7 @@
         End If
 
     End Sub
+
 
     Private Sub cbx_classicmilkcoffee_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbx_classicmilkcoffee.CheckedChanged
 
@@ -252,21 +295,58 @@
 
     End Sub
 
-    Private Sub btn_addorder_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_addorder.Click
-
+    Private Function totalQuanti(price As TextBox, quan As TextBox, stock As TextBox) As Integer
         Try
 
 
 
 
-            btn_pay.Enabled = True
+            stock.Text = stock.Text - quan.Text
+
             Dim a As Integer
 
-            a = txt_priceplainpasta.Text * txt_quantityplainpasta.Text
+            a = price.Text * quan.Text
 
 
-            txt_amounttopay.Text = a
+            Return a
+        Catch ex As Exception
+            MessageBox.Show("Please use proper input")
+        End Try
 
+    End Function
+
+    Private Sub btn_addorder_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_addorder.Click
+
+        Try
+
+            If TextBox1.Text = "" Or TextBox17.Text = "" Then
+                MessageBox.Show("Please Input customer name and address")
+            Else
+
+                total =
+                totalQuanti(txt_priceplainpasta, txt_quantityplainpasta, txt_stocksplainpasta) + ''pasta
+                totalQuanti(txt_pricecreamygarlicpasta, txt_quantitycreamygarlicpasta, TextBox2) +
+                totalQuanti(txt_pricecreamytomatopasta, txt_quantitycreamytomatopasta, TextBox3) +
+                totalQuanti(txt_priceblackpepperpasta, txt_quantityblackpepperpasta, TextBox4) +
+                totalQuanti(txt_pricecheesepasta, txt_quantitycheesepasta, TextBox5) +
+                totalQuanti(txt_priceplainbread, txt_quantityplainbread, TextBox6) + ''bread
+                totalQuanti(txt_pricemilkbread, txt_quantitymilkbread, TextBox7) +
+                totalQuanti(txt_pricecheesebread, txt_quantitycheesebread, TextBox8) +
+                totalQuanti(txt_pricebananabread, txt_quantitybananabread, TextBox9) +
+                totalQuanti(txt_pricechocolatebread, txt_quantitychocolatebread, TextBox10) +
+                totalQuanti(txt_priceplaincoffee, txt_quantityplaincoffee, TextBox11) + ''Coffee
+                totalQuanti(txt_priceclassiclatte, txt_quantityclassiclatte, TextBox12) +
+                totalQuanti(txt_priceclassicmilkcoffee, txt_quantityclassicmilkcoffee, TextBox13) +
+                totalQuanti(txt_priceclassicmocha, txt_quantityclassicmocha, TextBox14) +
+                totalQuanti(txt_priceclassiccaramel, txt_quantityclassiccaramel, TextBox15)
+
+
+            Dim VAT As Double = total * 0.12
+
+            total = total + VAT
+            txt_amounttopay.Text = total
+
+            End If
         Catch ex As Exception
 
             MessageBox.Show("Please select order")
@@ -277,38 +357,38 @@
     Private Sub btn_reset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_reset.Click
 
         cbx_plainpasta.Checked = False
-        txt_quantityplainpasta.Text = ""
+        txt_quantityplainpasta.Text = 0.00
         cbx_creamygarlicpasta.Checked = False
-        txt_quantitycreamygarlicpasta.Text = ""
+        txt_quantitycreamygarlicpasta.Text = 0.00
         cbx_creamytomatopasta.Checked = False
-        txt_quantitycreamytomatopasta.Text = ""
+        txt_quantitycreamytomatopasta.Text = 0.00
         cbx_blackpepperpasta.Checked = False
-        txt_quantityblackpepperpasta.Text = ""
+        txt_quantityblackpepperpasta.Text = 0.00
         cbx_cheesepasta.Checked = False
-        txt_quantitycheesepasta.Text = ""
+        txt_quantitycheesepasta.Text = 0.00
         cbx_plainbread.Checked = False
-        txt_quantityplainbread.Text = ""
+        txt_quantityplainbread.Text = 0.00
         cbx_milkbread.Checked = False
-        txt_quantitymilkbread.Text = ""
+        txt_quantitymilkbread.Text = 0.00
         cbx_cheesebread.Checked = False
-        txt_quantitycheesebread.Text = ""
+        txt_quantitycheesebread.Text = 0.00
         cbx_bananabread.Checked = False
-        txt_quantitybananabread.Text = ""
+        txt_quantitybananabread.Text = 0.00
         cbx_chocolatebread.Checked = False
-        txt_quantitychocolatebread.Text = ""
+        txt_quantitychocolatebread.Text = 0.00
         cbx_plaincoffee.Checked = False
-        txt_quantityplaincoffee.Text = ""
+        txt_quantityplaincoffee.Text = 0.00
         cbx_classiclatte.Checked = False
-        txt_quantityclassiclatte.Text = ""
+        txt_quantityclassiclatte.Text = 0.00
         cbx_classicmilkcoffee.Checked = False
-        txt_quantityclassicmilkcoffee.Text = ""
+        txt_quantityclassicmilkcoffee.Text = 0.00
         cbx_classicmocha.Checked = False
-        txt_quantityclassicmocha.Text = ""
+        txt_quantityclassicmocha.Text = 0.00
         cbx_classiccaramel.Checked = False
-        txt_quantityclassiccaramel.Text = ""
-        txt_amounttopay.Text = ""
-        txt_amounttendered.Text = ""
-        txt_change.Text = ""
+        txt_quantityclassiccaramel.Text = 0.00
+        txt_amounttopay.Text = 0.00
+        txt_amounttendered.Text = 0.00
+        txt_change.Text = 0.00
 
 
     End Sub
@@ -317,8 +397,15 @@
     Private Sub btn_pay_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_pay.Click
 
         Try
-            txt_change.Text = txt_amounttendered.Text - txt_amounttopay.Text
-            MessageBox.Show("Thank you for paying and being a good customer")
+
+            If Gcash.Checked = True Then
+                    gcashITO.Show()
+                    Me.Enabled = False
+
+                Else
+                    txt_change.Text = txt_amounttendered.Text - txt_amounttopay.Text
+                    MessageBox.Show("Thank you for paying and being a good customer")
+                End If
 
             cbx_plainpasta.Checked = False
             txt_quantityplainpasta.Text = "0.00"
@@ -361,9 +448,33 @@
 
     End Sub
 
-    Private Sub txt_amounttendered_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_amounttendered.TextChanged
 
-        btn_pay.Enabled = True
 
+    Private Sub cash_CheckedChanged(sender As Object, e As EventArgs) Handles cashRadio.CheckedChanged
+        txt_amounttendered.Enabled = True
+        txt_change.Enabled = True
+
+
+
+    End Sub
+
+    Private Sub regular_CheckedChanged(sender As Object, e As EventArgs) Handles regular.CheckedChanged
+        txt_amounttopay.Text = total
+    End Sub
+
+    Private Sub pwdSenior_CheckedChanged(sender As Object, e As EventArgs) Handles pwdSenior.CheckedChanged
+        Dim seniorDiscount As Double
+
+        seniorDiscount = total * 0.2
+
+        txt_amounttopay.Text = total - seniorDiscount
+    End Sub
+
+    Private Sub Bornday_CheckedChanged(sender As Object, e As EventArgs) Handles Bornday.CheckedChanged
+        Dim birthday As Double
+
+        birthday = total * 0.05
+
+        txt_amounttopay.Text = total - birthday
     End Sub
 End Class
