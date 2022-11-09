@@ -22,6 +22,7 @@ Partial Class frm_order
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_order))
         Me.gb_pasta = New System.Windows.Forms.GroupBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -95,6 +96,7 @@ Partial Class frm_order
         Me.cbx_classiclatte = New System.Windows.Forms.CheckBox()
         Me.cbx_plaincoffee = New System.Windows.Forms.CheckBox()
         Me.gb_payment = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.regular = New System.Windows.Forms.RadioButton()
@@ -122,6 +124,11 @@ Partial Class frm_order
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
+        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.gb_pasta.SuspendLayout()
         Me.gb_bread.SuspendLayout()
         Me.gb_coffee.SuspendLayout()
@@ -677,7 +684,7 @@ Partial Class frm_order
         Me.gb_coffee.Controls.Add(Me.cbx_classiclatte)
         Me.gb_coffee.Controls.Add(Me.cbx_plaincoffee)
         Me.gb_coffee.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gb_coffee.Location = New System.Drawing.Point(11, 325)
+        Me.gb_coffee.Location = New System.Drawing.Point(639, 100)
         Me.gb_coffee.Name = "gb_coffee"
         Me.gb_coffee.Size = New System.Drawing.Size(316, 208)
         Me.gb_coffee.TabIndex = 16
@@ -905,6 +912,7 @@ Partial Class frm_order
         'gb_payment
         '
         Me.gb_payment.BackColor = System.Drawing.Color.Silver
+        Me.gb_payment.Controls.Add(Me.Button3)
         Me.gb_payment.Controls.Add(Me.Button2)
         Me.gb_payment.Controls.Add(Me.GroupBox2)
         Me.gb_payment.Controls.Add(Me.TextBox16)
@@ -918,16 +926,25 @@ Partial Class frm_order
         Me.gb_payment.Controls.Add(Me.Label9)
         Me.gb_payment.Controls.Add(Me.Label10)
         Me.gb_payment.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gb_payment.Location = New System.Drawing.Point(187, 539)
+        Me.gb_payment.Location = New System.Drawing.Point(442, 314)
         Me.gb_payment.Name = "gb_payment"
-        Me.gb_payment.Size = New System.Drawing.Size(297, 357)
+        Me.gb_payment.Size = New System.Drawing.Size(297, 395)
         Me.gb_payment.TabIndex = 17
         Me.gb_payment.TabStop = False
         Me.gb_payment.Text = "Payment"
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(82, 308)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(117, 23)
+        Me.Button3.TabIndex = 15
+        Me.Button3.Text = "Order Confirmation"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(146, 313)
+        Me.Button2.Location = New System.Drawing.Point(81, 366)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(117, 23)
         Me.Button2.TabIndex = 14
@@ -1050,6 +1067,7 @@ Partial Class frm_order
         '
         Me.txt_change.Location = New System.Drawing.Point(168, 273)
         Me.txt_change.Name = "txt_change"
+        Me.txt_change.ReadOnly = True
         Me.txt_change.Size = New System.Drawing.Size(84, 21)
         Me.txt_change.TabIndex = 5
         Me.txt_change.Text = "0.00"
@@ -1066,7 +1084,7 @@ Partial Class frm_order
         'btn_pay
         '
         Me.btn_pay.Enabled = False
-        Me.btn_pay.Location = New System.Drawing.Point(23, 313)
+        Me.btn_pay.Location = New System.Drawing.Point(81, 337)
         Me.btn_pay.Name = "btn_pay"
         Me.btn_pay.Size = New System.Drawing.Size(117, 23)
         Me.btn_pay.TabIndex = 6
@@ -1095,9 +1113,9 @@ Partial Class frm_order
         '
         Me.btn_addorder.BackColor = System.Drawing.Color.Transparent
         Me.btn_addorder.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_addorder.Location = New System.Drawing.Point(30, 36)
+        Me.btn_addorder.Location = New System.Drawing.Point(14, 23)
         Me.btn_addorder.Name = "btn_addorder"
-        Me.btn_addorder.Size = New System.Drawing.Size(122, 37)
+        Me.btn_addorder.Size = New System.Drawing.Size(91, 37)
         Me.btn_addorder.TabIndex = 7
         Me.btn_addorder.Text = "ADD ORDER"
         Me.btn_addorder.UseVisualStyleBackColor = False
@@ -1105,9 +1123,9 @@ Partial Class frm_order
         'btn_exit
         '
         Me.btn_exit.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_exit.Location = New System.Drawing.Point(30, 140)
+        Me.btn_exit.Location = New System.Drawing.Point(205, 23)
         Me.btn_exit.Name = "btn_exit"
-        Me.btn_exit.Size = New System.Drawing.Size(122, 37)
+        Me.btn_exit.Size = New System.Drawing.Size(91, 37)
         Me.btn_exit.TabIndex = 19
         Me.btn_exit.Text = "EXIT"
         Me.btn_exit.UseVisualStyleBackColor = True
@@ -1120,9 +1138,9 @@ Partial Class frm_order
         Me.GroupBox3.Controls.Add(Me.btn_exit)
         Me.GroupBox3.Controls.Add(Me.btn_reset)
         Me.GroupBox3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(332, 325)
+        Me.GroupBox3.Location = New System.Drawing.Point(124, 325)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(301, 208)
+        Me.GroupBox3.Size = New System.Drawing.Size(301, 136)
         Me.GroupBox3.TabIndex = 17
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "menu"
@@ -1131,7 +1149,7 @@ Partial Class frm_order
         '
         Me.Button1.BackColor = System.Drawing.Color.Transparent
         Me.Button1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(170, 36)
+        Me.Button1.Location = New System.Drawing.Point(92, 74)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(122, 37)
         Me.Button1.TabIndex = 20
@@ -1141,16 +1159,16 @@ Partial Class frm_order
         'btn_reset
         '
         Me.btn_reset.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_reset.Location = New System.Drawing.Point(30, 90)
+        Me.btn_reset.Location = New System.Drawing.Point(111, 23)
         Me.btn_reset.Name = "btn_reset"
-        Me.btn_reset.Size = New System.Drawing.Size(122, 37)
+        Me.btn_reset.Size = New System.Drawing.Size(91, 37)
         Me.btn_reset.TabIndex = 18
         Me.btn_reset.Text = "RESET" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.btn_reset.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(18, 25)
+        Me.TextBox1.Location = New System.Drawing.Point(135, 25)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(359, 20)
         Me.TextBox1.TabIndex = 18
@@ -1158,7 +1176,7 @@ Partial Class frm_order
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(18, 9)
+        Me.Label15.Location = New System.Drawing.Point(136, 9)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(54, 13)
         Me.Label15.TabIndex = 19
@@ -1166,15 +1184,15 @@ Partial Class frm_order
         '
         'TextBox17
         '
-        Me.TextBox17.Location = New System.Drawing.Point(21, 64)
+        Me.TextBox17.Location = New System.Drawing.Point(136, 61)
         Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(603, 20)
+        Me.TextBox17.Size = New System.Drawing.Size(617, 20)
         Me.TextBox17.TabIndex = 20
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(18, 48)
+        Me.Label1.Location = New System.Drawing.Point(133, 45)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(45, 13)
         Me.Label1.TabIndex = 21
@@ -1182,17 +1200,52 @@ Partial Class frm_order
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(424, 25)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(735, 12)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 22
+        '
+        'PrintDialog1
+        '
+        Me.PrintDialog1.UseEXDialog = True
+        '
+        'PrintDocument1
+        '
+        Me.PrintDocument1.DocumentName = "Hello Friend"
+        '
+        'PageSetupDialog1
+        '
+        Me.PageSetupDialog1.AllowMargins = False
+        Me.PageSetupDialog1.AllowOrientation = False
+        Me.PageSetupDialog1.Document = Me.PrintDocument1
+        '
+        'PrintPreviewDialog1
+        '
+        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialog1.Document = Me.PrintDocument1
+        Me.PrintPreviewDialog1.Enabled = True
+        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        Me.PrintPreviewDialog1.Visible = False
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(139, 486)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(186, 96)
+        Me.RichTextBox1.TabIndex = 23
+        Me.RichTextBox1.Text = ""
+        Me.RichTextBox1.Visible = False
         '
         'frm_order
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(645, 908)
+        Me.ClientSize = New System.Drawing.Size(968, 727)
+        Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox17)
@@ -1323,4 +1376,10 @@ Partial Class frm_order
     Friend WithEvents Label1 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Button2 As Button
+    Friend WithEvents PrintDialog1 As PrintDialog
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents PageSetupDialog1 As PageSetupDialog
+    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
+    Friend WithEvents Button3 As Button
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class

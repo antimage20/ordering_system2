@@ -79,6 +79,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="gcash.Designer.vb">
       <DependentUpon>gcash.vb</DependentUpon>
     </Compile>
@@ -112,10 +118,19 @@
     <Compile Include="order2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="stocks.Designer.vb">
+      <DependentUpon>stocks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="stocks.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gcash.resx">
       <DependentUpon>gcash.vb</DependentUpon>
@@ -131,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="order2.resx">
       <DependentUpon>order2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stocks.resx">
+      <DependentUpon>stocks.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

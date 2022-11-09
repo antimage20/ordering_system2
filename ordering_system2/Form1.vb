@@ -1,5 +1,5 @@
 ﻿Public Class Form1
-    Dim attempts As Integer = 0
+    Public attempts As Integer = 0
 
     Private Sub btn_login_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_login.Click
 
