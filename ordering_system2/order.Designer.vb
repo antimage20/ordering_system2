@@ -951,16 +951,16 @@ Partial Class frm_order
         Me.gb_payment.Controls.Add(Me.Label9)
         Me.gb_payment.Controls.Add(Me.Label10)
         Me.gb_payment.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gb_payment.Location = New System.Drawing.Point(197, 320)
+        Me.gb_payment.Location = New System.Drawing.Point(91, 320)
         Me.gb_payment.Name = "gb_payment"
-        Me.gb_payment.Size = New System.Drawing.Size(297, 395)
+        Me.gb_payment.Size = New System.Drawing.Size(389, 317)
         Me.gb_payment.TabIndex = 17
         Me.gb_payment.TabStop = False
         Me.gb_payment.Text = "Payment"
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(82, 308)
+        Me.Button3.Location = New System.Drawing.Point(12, 280)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(117, 23)
         Me.Button3.TabIndex = 15
@@ -970,7 +970,7 @@ Partial Class frm_order
         'Button2
         '
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(81, 366)
+        Me.Button2.Location = New System.Drawing.Point(258, 280)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(117, 23)
         Me.Button2.TabIndex = 14
@@ -982,9 +982,9 @@ Partial Class frm_order
         Me.GroupBox2.Controls.Add(Me.regular)
         Me.GroupBox2.Controls.Add(Me.pwdSenior)
         Me.GroupBox2.Controls.Add(Me.Bornday)
-        Me.GroupBox2.Location = New System.Drawing.Point(32, 47)
+        Me.GroupBox2.Location = New System.Drawing.Point(51, 47)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(221, 100)
+        Me.GroupBox2.Size = New System.Drawing.Size(288, 89)
         Me.GroupBox2.TabIndex = 13
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Discount"
@@ -1004,7 +1004,7 @@ Partial Class frm_order
         'pwdSenior
         '
         Me.pwdSenior.AutoSize = True
-        Me.pwdSenior.Location = New System.Drawing.Point(14, 45)
+        Me.pwdSenior.Location = New System.Drawing.Point(136, 20)
         Me.pwdSenior.Name = "pwdSenior"
         Me.pwdSenior.Size = New System.Drawing.Size(152, 19)
         Me.pwdSenior.TabIndex = 8
@@ -1014,7 +1014,7 @@ Partial Class frm_order
         'Bornday
         '
         Me.Bornday.AutoSize = True
-        Me.Bornday.Location = New System.Drawing.Point(14, 70)
+        Me.Bornday.Location = New System.Drawing.Point(87, 45)
         Me.Bornday.Name = "Bornday"
         Me.Bornday.Size = New System.Drawing.Size(112, 19)
         Me.Bornday.TabIndex = 9
@@ -1032,7 +1032,7 @@ Partial Class frm_order
         '
         'txt_amounttendered
         '
-        Me.txt_amounttendered.Location = New System.Drawing.Point(168, 247)
+        Me.txt_amounttendered.Location = New System.Drawing.Point(133, 238)
         Me.txt_amounttendered.Name = "txt_amounttendered"
         Me.txt_amounttendered.Size = New System.Drawing.Size(84, 21)
         Me.txt_amounttendered.TabIndex = 4
@@ -1051,9 +1051,9 @@ Partial Class frm_order
         '
         Me.GroupBox1.Controls.Add(Me.cashRadio)
         Me.GroupBox1.Controls.Add(Me.Gcash)
-        Me.GroupBox1.Location = New System.Drawing.Point(38, 190)
+        Me.GroupBox1.Location = New System.Drawing.Point(52, 172)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(215, 51)
+        Me.GroupBox1.Size = New System.Drawing.Size(282, 51)
         Me.GroupBox1.TabIndex = 12
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Mode Of Payment"
@@ -1082,7 +1082,7 @@ Partial Class frm_order
         '
         'txt_amounttopay
         '
-        Me.txt_amounttopay.Location = New System.Drawing.Point(125, 159)
+        Me.txt_amounttopay.Location = New System.Drawing.Point(125, 145)
         Me.txt_amounttopay.Name = "txt_amounttopay"
         Me.txt_amounttopay.ReadOnly = True
         Me.txt_amounttopay.Size = New System.Drawing.Size(84, 21)
@@ -1091,7 +1091,7 @@ Partial Class frm_order
         '
         'txt_change
         '
-        Me.txt_change.Location = New System.Drawing.Point(168, 273)
+        Me.txt_change.Location = New System.Drawing.Point(279, 238)
         Me.txt_change.Name = "txt_change"
         Me.txt_change.ReadOnly = True
         Me.txt_change.Size = New System.Drawing.Size(84, 21)
@@ -1101,7 +1101,7 @@ Partial Class frm_order
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(35, 162)
+        Me.Label8.Location = New System.Drawing.Point(35, 148)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(84, 15)
         Me.Label8.TabIndex = 0
@@ -1110,7 +1110,7 @@ Partial Class frm_order
         'btn_pay
         '
         Me.btn_pay.Enabled = False
-        Me.btn_pay.Location = New System.Drawing.Point(81, 337)
+        Me.btn_pay.Location = New System.Drawing.Point(133, 280)
         Me.btn_pay.Name = "btn_pay"
         Me.btn_pay.Size = New System.Drawing.Size(117, 23)
         Me.btn_pay.TabIndex = 6
@@ -1120,7 +1120,7 @@ Partial Class frm_order
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(53, 250)
+        Me.Label9.Location = New System.Drawing.Point(29, 241)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(100, 15)
         Me.Label9.TabIndex = 1
@@ -1129,7 +1129,7 @@ Partial Class frm_order
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(90, 274)
+        Me.Label10.Location = New System.Drawing.Point(223, 241)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(50, 15)
         Me.Label10.TabIndex = 2
@@ -1164,7 +1164,7 @@ Partial Class frm_order
         Me.GroupBox3.Controls.Add(Me.btn_exit)
         Me.GroupBox3.Controls.Add(Me.btn_reset)
         Me.GroupBox3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(510, 320)
+        Me.GroupBox3.Location = New System.Drawing.Point(528, 320)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(301, 136)
         Me.GroupBox3.TabIndex = 17
@@ -1270,7 +1270,7 @@ Partial Class frm_order
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(968, 727)
+        Me.ClientSize = New System.Drawing.Size(968, 649)
         Me.Controls.Add(Me.gb_payment)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.DateTimePicker1)
