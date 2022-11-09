@@ -179,6 +179,7 @@ Partial Class frm_order
         Me.TextBox5.ReadOnly = True
         Me.TextBox5.Size = New System.Drawing.Size(46, 21)
         Me.TextBox5.TabIndex = 16
+        Me.TextBox5.Tag = "B"
         Me.TextBox5.Text = "30"
         Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -189,6 +190,7 @@ Partial Class frm_order
         Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(46, 21)
         Me.TextBox4.TabIndex = 16
+        Me.TextBox4.Tag = "B"
         Me.TextBox4.Text = "30"
         Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -199,6 +201,7 @@ Partial Class frm_order
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(46, 21)
         Me.TextBox3.TabIndex = 16
+        Me.TextBox3.Tag = "B"
         Me.TextBox3.Text = "30"
         Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -209,6 +212,7 @@ Partial Class frm_order
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(46, 21)
         Me.TextBox2.TabIndex = 16
+        Me.TextBox2.Tag = "B"
         Me.TextBox2.Text = "30"
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -219,6 +223,7 @@ Partial Class frm_order
         Me.txt_stocksplainpasta.ReadOnly = True
         Me.txt_stocksplainpasta.Size = New System.Drawing.Size(46, 21)
         Me.txt_stocksplainpasta.TabIndex = 16
+        Me.txt_stocksplainpasta.Tag = "B"
         Me.txt_stocksplainpasta.Text = "30"
         Me.txt_stocksplainpasta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -237,7 +242,7 @@ Partial Class frm_order
         Me.txt_quantitycheesepasta.Name = "txt_quantitycheesepasta"
         Me.txt_quantitycheesepasta.Size = New System.Drawing.Size(46, 21)
         Me.txt_quantitycheesepasta.TabIndex = 14
-        Me.txt_quantitycheesepasta.Tag = "AD"
+        Me.txt_quantitycheesepasta.Tag = "A"
         Me.txt_quantitycheesepasta.Text = "0"
         Me.txt_quantitycheesepasta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -247,7 +252,7 @@ Partial Class frm_order
         Me.txt_quantityblackpepperpasta.Name = "txt_quantityblackpepperpasta"
         Me.txt_quantityblackpepperpasta.Size = New System.Drawing.Size(46, 21)
         Me.txt_quantityblackpepperpasta.TabIndex = 13
-        Me.txt_quantityblackpepperpasta.Tag = "AD"
+        Me.txt_quantityblackpepperpasta.Tag = "A"
         Me.txt_quantityblackpepperpasta.Text = "0"
         Me.txt_quantityblackpepperpasta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -257,7 +262,7 @@ Partial Class frm_order
         Me.txt_quantitycreamytomatopasta.Name = "txt_quantitycreamytomatopasta"
         Me.txt_quantitycreamytomatopasta.Size = New System.Drawing.Size(46, 21)
         Me.txt_quantitycreamytomatopasta.TabIndex = 7
-        Me.txt_quantitycreamytomatopasta.Tag = "AD"
+        Me.txt_quantitycreamytomatopasta.Tag = "A"
         Me.txt_quantitycreamytomatopasta.Text = "0"
         Me.txt_quantitycreamytomatopasta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -267,7 +272,7 @@ Partial Class frm_order
         Me.txt_quantitycreamygarlicpasta.Name = "txt_quantitycreamygarlicpasta"
         Me.txt_quantitycreamygarlicpasta.Size = New System.Drawing.Size(46, 21)
         Me.txt_quantitycreamygarlicpasta.TabIndex = 12
-        Me.txt_quantitycreamygarlicpasta.Tag = "AD"
+        Me.txt_quantitycreamygarlicpasta.Tag = "A"
         Me.txt_quantitycreamygarlicpasta.Text = "0"
         Me.txt_quantitycreamygarlicpasta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -277,7 +282,7 @@ Partial Class frm_order
         Me.txt_quantityplainpasta.Name = "txt_quantityplainpasta"
         Me.txt_quantityplainpasta.Size = New System.Drawing.Size(46, 21)
         Me.txt_quantityplainpasta.TabIndex = 11
-        Me.txt_quantityplainpasta.Tag = "AD"
+        Me.txt_quantityplainpasta.Tag = "A"
         Me.txt_quantityplainpasta.Text = "0"
         Me.txt_quantityplainpasta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -446,6 +451,7 @@ Partial Class frm_order
         Me.TextBox10.ReadOnly = True
         Me.TextBox10.Size = New System.Drawing.Size(46, 21)
         Me.TextBox10.TabIndex = 16
+        Me.TextBox10.Tag = "B"
         Me.TextBox10.Text = "30"
         Me.TextBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -455,6 +461,7 @@ Partial Class frm_order
         Me.txt_quantitychocolatebread.Name = "txt_quantitychocolatebread"
         Me.txt_quantitychocolatebread.Size = New System.Drawing.Size(46, 21)
         Me.txt_quantitychocolatebread.TabIndex = 14
+        Me.txt_quantitychocolatebread.Tag = "A"
         Me.txt_quantitychocolatebread.Text = "0"
         Me.txt_quantitychocolatebread.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -465,6 +472,7 @@ Partial Class frm_order
         Me.TextBox9.ReadOnly = True
         Me.TextBox9.Size = New System.Drawing.Size(46, 21)
         Me.TextBox9.TabIndex = 16
+        Me.TextBox9.Tag = "B"
         Me.TextBox9.Text = "30"
         Me.TextBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -474,6 +482,7 @@ Partial Class frm_order
         Me.txt_quantitybananabread.Name = "txt_quantitybananabread"
         Me.txt_quantitybananabread.Size = New System.Drawing.Size(46, 21)
         Me.txt_quantitybananabread.TabIndex = 13
+        Me.txt_quantitybananabread.Tag = "A"
         Me.txt_quantitybananabread.Text = "0"
         Me.txt_quantitybananabread.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -484,6 +493,7 @@ Partial Class frm_order
         Me.TextBox8.ReadOnly = True
         Me.TextBox8.Size = New System.Drawing.Size(46, 21)
         Me.TextBox8.TabIndex = 16
+        Me.TextBox8.Tag = "B"
         Me.TextBox8.Text = "30"
         Me.TextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -493,6 +503,7 @@ Partial Class frm_order
         Me.txt_quantitycheesebread.Name = "txt_quantitycheesebread"
         Me.txt_quantitycheesebread.Size = New System.Drawing.Size(46, 21)
         Me.txt_quantitycheesebread.TabIndex = 7
+        Me.txt_quantitycheesebread.Tag = "A"
         Me.txt_quantitycheesebread.Text = "0"
         Me.txt_quantitycheesebread.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -503,6 +514,7 @@ Partial Class frm_order
         Me.TextBox7.ReadOnly = True
         Me.TextBox7.Size = New System.Drawing.Size(46, 21)
         Me.TextBox7.TabIndex = 16
+        Me.TextBox7.Tag = "B"
         Me.TextBox7.Text = "30"
         Me.TextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -512,6 +524,7 @@ Partial Class frm_order
         Me.txt_quantitymilkbread.Name = "txt_quantitymilkbread"
         Me.txt_quantitymilkbread.Size = New System.Drawing.Size(46, 21)
         Me.txt_quantitymilkbread.TabIndex = 12
+        Me.txt_quantitymilkbread.Tag = "A"
         Me.txt_quantitymilkbread.Text = "0"
         Me.txt_quantitymilkbread.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -522,6 +535,7 @@ Partial Class frm_order
         Me.TextBox6.ReadOnly = True
         Me.TextBox6.Size = New System.Drawing.Size(46, 21)
         Me.TextBox6.TabIndex = 16
+        Me.TextBox6.Tag = "B"
         Me.TextBox6.Text = "30"
         Me.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -531,6 +545,7 @@ Partial Class frm_order
         Me.txt_quantityplainbread.Name = "txt_quantityplainbread"
         Me.txt_quantityplainbread.Size = New System.Drawing.Size(46, 21)
         Me.txt_quantityplainbread.TabIndex = 11
+        Me.txt_quantityplainbread.Tag = "A"
         Me.txt_quantityplainbread.Text = "0"
         Me.txt_quantityplainbread.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -698,6 +713,7 @@ Partial Class frm_order
         Me.TextBox15.ReadOnly = True
         Me.TextBox15.Size = New System.Drawing.Size(46, 21)
         Me.TextBox15.TabIndex = 16
+        Me.TextBox15.Tag = "B"
         Me.TextBox15.Text = "30"
         Me.TextBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -707,6 +723,7 @@ Partial Class frm_order
         Me.txt_quantityclassiccaramel.Name = "txt_quantityclassiccaramel"
         Me.txt_quantityclassiccaramel.Size = New System.Drawing.Size(46, 21)
         Me.txt_quantityclassiccaramel.TabIndex = 14
+        Me.txt_quantityclassiccaramel.Tag = "A"
         Me.txt_quantityclassiccaramel.Text = "0"
         Me.txt_quantityclassiccaramel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -716,6 +733,7 @@ Partial Class frm_order
         Me.txt_quantityclassicmocha.Name = "txt_quantityclassicmocha"
         Me.txt_quantityclassicmocha.Size = New System.Drawing.Size(46, 21)
         Me.txt_quantityclassicmocha.TabIndex = 13
+        Me.txt_quantityclassicmocha.Tag = "A"
         Me.txt_quantityclassicmocha.Text = "0"
         Me.txt_quantityclassicmocha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -726,6 +744,7 @@ Partial Class frm_order
         Me.TextBox14.ReadOnly = True
         Me.TextBox14.Size = New System.Drawing.Size(46, 21)
         Me.TextBox14.TabIndex = 16
+        Me.TextBox14.Tag = "B"
         Me.TextBox14.Text = "30"
         Me.TextBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -735,6 +754,7 @@ Partial Class frm_order
         Me.txt_quantityclassicmilkcoffee.Name = "txt_quantityclassicmilkcoffee"
         Me.txt_quantityclassicmilkcoffee.Size = New System.Drawing.Size(46, 21)
         Me.txt_quantityclassicmilkcoffee.TabIndex = 7
+        Me.txt_quantityclassicmilkcoffee.Tag = "A"
         Me.txt_quantityclassicmilkcoffee.Text = "0"
         Me.txt_quantityclassicmilkcoffee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -744,6 +764,7 @@ Partial Class frm_order
         Me.txt_quantityclassiclatte.Name = "txt_quantityclassiclatte"
         Me.txt_quantityclassiclatte.Size = New System.Drawing.Size(46, 21)
         Me.txt_quantityclassiclatte.TabIndex = 12
+        Me.txt_quantityclassiclatte.Tag = "A"
         Me.txt_quantityclassiclatte.Text = "0"
         Me.txt_quantityclassiclatte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -754,6 +775,7 @@ Partial Class frm_order
         Me.TextBox13.ReadOnly = True
         Me.TextBox13.Size = New System.Drawing.Size(46, 21)
         Me.TextBox13.TabIndex = 16
+        Me.TextBox13.Tag = "B"
         Me.TextBox13.Text = "30"
         Me.TextBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -763,6 +785,7 @@ Partial Class frm_order
         Me.txt_quantityplaincoffee.Name = "txt_quantityplaincoffee"
         Me.txt_quantityplaincoffee.Size = New System.Drawing.Size(46, 21)
         Me.txt_quantityplaincoffee.TabIndex = 11
+        Me.txt_quantityplaincoffee.Tag = "A"
         Me.txt_quantityplaincoffee.Text = "0"
         Me.txt_quantityplaincoffee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -782,6 +805,7 @@ Partial Class frm_order
         Me.TextBox12.ReadOnly = True
         Me.TextBox12.Size = New System.Drawing.Size(46, 21)
         Me.TextBox12.TabIndex = 16
+        Me.TextBox12.Tag = "B"
         Me.TextBox12.Text = "30"
         Me.TextBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -810,6 +834,7 @@ Partial Class frm_order
         Me.TextBox11.ReadOnly = True
         Me.TextBox11.Size = New System.Drawing.Size(46, 21)
         Me.TextBox11.TabIndex = 16
+        Me.TextBox11.Tag = "B"
         Me.TextBox11.Text = "30"
         Me.TextBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -926,7 +951,7 @@ Partial Class frm_order
         Me.gb_payment.Controls.Add(Me.Label9)
         Me.gb_payment.Controls.Add(Me.Label10)
         Me.gb_payment.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gb_payment.Location = New System.Drawing.Point(442, 314)
+        Me.gb_payment.Location = New System.Drawing.Point(197, 320)
         Me.gb_payment.Name = "gb_payment"
         Me.gb_payment.Size = New System.Drawing.Size(297, 395)
         Me.gb_payment.TabIndex = 17
@@ -944,6 +969,7 @@ Partial Class frm_order
         '
         'Button2
         '
+        Me.Button2.Enabled = False
         Me.Button2.Location = New System.Drawing.Point(81, 366)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(117, 23)
@@ -1138,7 +1164,7 @@ Partial Class frm_order
         Me.GroupBox3.Controls.Add(Me.btn_exit)
         Me.GroupBox3.Controls.Add(Me.btn_reset)
         Me.GroupBox3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(124, 325)
+        Me.GroupBox3.Location = New System.Drawing.Point(510, 320)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(301, 136)
         Me.GroupBox3.TabIndex = 17
@@ -1245,6 +1271,7 @@ Partial Class frm_order
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(968, 727)
+        Me.Controls.Add(Me.gb_payment)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label1)
@@ -1252,7 +1279,6 @@ Partial Class frm_order
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.gb_payment)
         Me.Controls.Add(Me.gb_coffee)
         Me.Controls.Add(Me.gb_bread)
         Me.Controls.Add(Me.gb_pasta)

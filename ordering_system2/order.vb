@@ -364,17 +364,6 @@
         stocks.Show()
     End Sub
 
-    Private Sub txt_amounttendered_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_amounttendered.KeyPress
-
-        If Not txt_amounttopay.Text = 0.00 Then
-
-            btn_pay.Enabled = True
-
-
-        End If
-
-    End Sub
-
     Private Sub cbx_classiclatte_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbx_classiclatte.CheckedChanged
 
 
@@ -510,6 +499,10 @@
     End Sub
 
     Private Sub btn_reset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_reset.Click
+        total = 0
+
+        Button2.Enabled = False
+
         btn_pay.Enabled = False
         cbx_plainpasta.Checked = False
         txt_quantityplainpasta.Text = 0.00
@@ -559,12 +552,15 @@
                 Me.Enabled = False
 
             Else
+
                 Dim change As Double = txt_amounttendered.Text - txt_amounttopay.Text
 
 
                 If change < 0 Then
                     MessageBox.Show("Input a valid amount")
                 Else
+
+                    Button2.Enabled = True
                     MessageBox.Show("Thank you for paying and being a good customer")
                     txt_change.Text = change
 
@@ -581,37 +577,8 @@
 
                     PrintDocument1.DefaultPageSettings.PaperSize = New Printing.PaperSize("Long Paper", 850, 1300)
                     Me.PrintDocument1.Print()
+                    btn_pay.Enabled = False
 
-                    cbx_plainpasta.Checked = False
-                    txt_quantityplainpasta.Text = "0.00"
-                    cbx_creamygarlicpasta.Checked = False
-                    txt_quantitycreamygarlicpasta.Text = "0.00"
-                    cbx_creamytomatopasta.Checked = False
-                    txt_quantitycreamytomatopasta.Text = "0.00"
-                    cbx_blackpepperpasta.Checked = False
-                    txt_quantityblackpepperpasta.Text = "0.00"
-                    cbx_cheesepasta.Checked = False
-                    txt_quantitycheesepasta.Text = "0.00"
-                    cbx_plainbread.Checked = False
-                    txt_quantityplainbread.Text = "0.00"
-                    cbx_milkbread.Checked = False
-                    txt_quantitymilkbread.Text = "0.00"
-                    cbx_cheesebread.Checked = False
-                    txt_quantitycheesebread.Text = "0.00"
-                    cbx_bananabread.Checked = False
-                    txt_quantitybananabread.Text = "0.00"
-                    cbx_chocolatebread.Checked = False
-                    txt_quantitychocolatebread.Text = "0.00"
-                    cbx_plaincoffee.Checked = False
-                    txt_quantityplaincoffee.Text = "0.00"
-                    cbx_classiclatte.Checked = False
-                    txt_quantityclassiclatte.Text = "0.00"
-                    cbx_classicmilkcoffee.Checked = False
-                    txt_quantityclassicmilkcoffee.Text = "0.00"
-                    cbx_classicmocha.Checked = False
-                    txt_quantityclassicmocha.Text = "0.00"
-                    cbx_classiccaramel.Checked = False
-                    txt_quantityclassiccaramel.Text = "0.00"
                 End If
 
 
