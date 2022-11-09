@@ -200,7 +200,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ordering_system2_TemporaryKey.pfx" />
     <None Include="Resources\a.jpg" />
   </ItemGroup>
   <ItemGroup>
